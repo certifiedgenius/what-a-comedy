@@ -1,13 +1,3 @@
-/* table of contents
-
-1. Global Styles
-
-2. Typography
-
-3. Components
-	3.1 buttons
-*/
-
 /* -------------------------------------------------------------------------- */
 /*                             Master   shift + alt + x                       */
 /* -------------------------------------------------------------------------- */
@@ -93,6 +83,40 @@ button:hover {
 }
 
 
+/* -------------------------------------------------------------------------- */
+/*                              Header Responsive                             */
+/* -------------------------------------------------------------------------- */
+
+
+/* Iphone 5/SE */
+@media screen and (max-width: 568px) {
+    .headerContainer {
+        padding: 1rem;
+    }
+
+    .nav-area li {
+        display: inline-block;
+        padding: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: .9rem;
+    }
+
+    button {
+        margin-top: 1rem;
+        margin-left: .8rem;
+
+        font-size: 12px;
+        width: 60px;
+        height: 40px;
+    }
+
+    .header-title {
+        font-size: 1rem;
+    }
+}
+
+
 
 
 /* -------------------------------------------------------------------------- */
@@ -116,8 +140,8 @@ button:hover {
 
 /*  video container  */
 .video-container {
-    width: 45%;
-    max-width: 1000px;
+    width: 560px;
+    max-width: 315px;
     display: flex;
     justify-content: center;
 
@@ -125,14 +149,44 @@ button:hover {
     border: none;
     padding-right: 2.5px;
 
+}
+
+.yt-video-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    
     margin-block-start: 2em;
     margin-block-end: 2em;
+}
+
+
+.yt-video-container iframe {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    
+    width: 100%;
+    height: 100%;
 }
 
 
 .rickroll {
     text-align: center;
     margin-block-end: 2em;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 Responsive                                 */
+/* -------------------------------------------------------------------------- */
+
+/* Iphone 5/SE */
+@media screen and (max-width: 568px) {
+    .rickroll {
+        font-size: .5rem;
+    }
 }
 
 
@@ -728,12 +782,16 @@ button:hover {
 #footer-email {
     width: 250px;
     height: 40px;
+    
     border-radius: 4px;
+    
     outline: none;
     border: none;
+    
     padding-left: 0.5rem;
-    font-size: 1rem;
     margin-bottom: 1rem;
+    
+    font-size: 1rem;
 }
 
 
@@ -745,20 +803,30 @@ button:hover {
 #footer-email-btn {
     width: 100px;
     height: 40px;
+
     border-radius: 4px;
     background-color: #f9423d;
+
     outline: none;
     border: none;
     color: #fff;
+
     font-size: 1rem;
 }
 
 
 #footer-email-btn:hover {
-    cursor: pointer;
     background-color: #337af1;
+    cursor: pointer;
     transition: all 0.4s ease-out;
 }
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 Responsive                                 */
+/* -------------------------------------------------------------------------- */
 
 
 @media screen and (max-width: 1150px) {
@@ -790,5 +858,24 @@ button:hover {
 
     .footer-email-form {
         margin-top: 2rem;
+    }
+}
+
+
+/* Iphone 5/SE */
+@media screen and (max-width: 568px) {
+    .footer {
+        height: 30vh;
+        width: 40%;
+    }
+
+    
+    .footer-3 {
+        display: block;
+    }
+
+
+    .footer-email-form {
+        margin-top: .5rem;
     }
 }
