@@ -571,8 +571,17 @@ button:hover {
 
 
 
-/* Responsive page for Photo Page */
-@media screen and (max-width: 900px) {
+/* -------------------------------------------------------------------------- */
+/*                       /Responsive page for Photo Page                      */
+/* -------------------------------------------------------------------------- */
+@media (min-width: 900px) and (max-width: 1440px) {
+    .audio-container {
+        margin-left: 35rem;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
     .img-gallery {
         grid-template-areas:
             'img-1 img-1 img-2 img-2'
@@ -598,7 +607,7 @@ button:hover {
 }
 
 
-@media screen and (max-width: 600px) {
+@media (min-width: 375px) and (max-width: 600px) {
     .img-gallery {
         grid-template-areas:
             'img-1 img-1 img-1 img-1'
@@ -621,9 +630,17 @@ button:hover {
         height: 30rem;
     }
 
+    .audio-container {
+        margin-left: 35rem;
+        margin-bottom: 10px;
+    }
 }
 
-
+@media (max-width: 375px) {
+    .audio-container {
+        margin-left: 2.2rem;
+    }
+}
 
 
 
@@ -806,6 +823,26 @@ button:hover {
     margin-block-end: 2em;
 }
 
+
+
+/* -------------------------------------------------------------------------- */
+/*                             Responsive about me                            */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 375px) {
+    .trav {
+        height: 250px;
+    }
+
+    .main-content-about-me {
+        margin-left: -1.9rem;
+    }
+
+    .aboutmep {
+        left: -1.7rem;
+        font-size: 9px;
+        top: 8rem;
+    }
+}
 
 
 
