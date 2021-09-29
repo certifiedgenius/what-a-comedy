@@ -725,6 +725,54 @@ button:hover {
 
 
 
+/* -------------------------------------------------------------------------- */
+/*                           Responsive article page                          */
+/* -------------------------------------------------------------------------- */
+/* Macbook air 13 inch */
+@media (min-width: 375px) and (max-width: 1440px) {
+    .page-line-break {
+        margin-left: 28.2rem;
+        max-width: 60ch;
+    }
+}
+
+@media (max-width: 375px) {
+    .pijonärer-idag {
+        margin-left: 0px;
+        font-size: 10px;
+    }
+
+    .author-info {
+        position: relative;
+        right: 250px;
+    }
+
+    .author-info-2 {
+        position: relative;
+        right: 250px;
+    }
+
+    .articlepic {
+        width: 267px;
+        height: 160px;
+    }
+
+    .article-link {
+        margin-left: 0px;
+    }
+
+    .section-grid {
+        width: 135%;
+        margin-left: -51px;
+        height: 175px;
+    }
+
+    .footer {
+        width: 71.4%;
+    }
+}
+
+
 
 /* -------------------------------------------------------------------------- */
 /*                                About Me Page                               */
