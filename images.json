@@ -1,0 +1,57 @@
+[
+    {
+        "id": "0",
+        "url": "img/img-1.jpg",
+        "title": "John Lennon",
+        "description": "John Lennon med sin Mellotron MK II",
+        "alt": "John Lennon spelar på sin Mellotron MK II"
+    },
+    
+    {
+        "id": "1",
+        "url": "img/img-2.jpg",
+        "title": "Kanye West och ASR-10",
+        "description": "Kanye West på en photoshot med sin ASR-10",
+        "alt": "Kanye West sitter fokuserad och spelar på sin ASR-10"
+    },
+    
+    {
+        "id": "2",
+        "url": "img/img-3.jpg",
+        "title": "Kanye West med ASR-10",
+        "description": "Kanye West klipper en sample med sin ASR-10",
+        "alt": "Kanye West sitter i studion med sin ASR-10"
+    },
+    
+    {
+        "id": "3",
+        "url": "img/img-4.jpg",
+        "title": "Ensoniq ASR-10",
+        "description": "Ensoniq ASR-10",
+        "alt": "Bild på en Ensoniq ASR-10"
+    },
+    
+    {
+        "id": "4",
+        "url": "img/img-5.jpg",
+        "title": "MPC 2000",
+        "description": "Bild på en MPC 2000 som Kanye West använder för att bygga upp sina drums.",
+        "alt": "Bild på en MPC 2000"
+    },
+    
+    {
+        "id": "5",
+        "url": "img/img-6.jpg",
+        "title": "TR-Roland 808",
+        "description": "Kanye West använde TR-Roland 808 till att göra 808s & Hearthbreak",
+        "alt": "Bild på en TR-Roland 808"
+    }
+    
+    {
+        "id": "6",
+        "url": "img/img-7.jpg",
+        "title": "Grandmaster Flash",
+        "description": "Hip Hop Pionär",
+        "alt": "Grandmaster Flash på en spelning"
+    }
+]
