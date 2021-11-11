@@ -462,7 +462,11 @@ button:hover {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 10px;
-    
+    grid-template-areas: 
+    "gallery-p gallery-p gallery-p gallery-p"
+    "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+    "img-1 img-2 img-3 img-4"
+    "img-5 img-6 img-3 img-7";
 }
 
 #index-gallery .gallery-img {
@@ -476,6 +480,18 @@ button:hover {
 
 
 /* Images */
+#index-gallery p {
+    grid-area: gallery-p;
+    
+}
+
+
+#index-gallery h2 {
+    grid-area: gallery-h2;
+    
+}
+
+
 #index-gallery .img-1 {
     grid-area: img-1;
     background-image: url("../img/thumbs/img-1.jpg");
@@ -491,6 +507,7 @@ button:hover {
 #index-gallery .img-3 {
     grid-area: img-3;
     background-image: url("../img/thumbs/img-3.jpg");
+    height: 610px;
 }
 
 
@@ -516,6 +533,19 @@ button:hover {
     grid-area: img-7;
     background-image: url("../img/thumbs/img-7.jpg");
 }
+
+
+/* Gallery image titles */
+gallery-img div {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /*
 .img-gallery a {
