@@ -17,6 +17,17 @@ if(galleryImages) {
             container.appendChild(newImgWindow);
             newImgWindow.setAttribute("class", "img-window");
             newImgWindow.setAttribute("onclick", "closeImg()");
+
+            let newImg = document.createElement("img");
+            newImgWindow.appendChild(newImg);
+            newImg.setAttribute("src", "img/" + setNewImgUrl);
+
+            let newPrevBtn = document.createElement("a");
+            let btnPrevText = document.createTextNode("Prev");
         }
     });
+}
+
+function closeImg() {
+    document.querySelector(".img-window").remove();
 }
