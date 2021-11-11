@@ -1,28 +1,18 @@
-const fs = require('fs');
-const http = require('http');
+// fetching data from the images.json file
+fetch('/data/images.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    });
 
 
-const json = fs.readFileSync(`${__dirname}/data/data.json`, 'utf-8');
-const imgData = JSON.parse(json);
-
-
-const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-type': 'text/html'});
-    res.end('This is the response');
-});
-
-
-server.listen(1337, '127.0.0.1', () => {
-    console.log('Listining for requessts now');
-});
-
-
-
-
+// Data Containers
 let galleryImages = document.querySelectorAll(".gallery-img");
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
 
+
+// if statement for the Images
 if(galleryImages) {
     galleryImages.forEach(function(image, index) {
         image.onclick = function() {
@@ -45,6 +35,7 @@ if(galleryImages) {
             newImg.setAttribute("id", "current-img");
 
 
+            //Previous and Next Button
             newImg.onload = function() {
                 let imgWidth = this.width;
                 let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
@@ -70,6 +61,8 @@ if(galleryImages) {
     });
 }
 
+
+// Popup Image Closing Function
 function closeImg() {
     document.querySelector(".img-window").remove();
     document.querySelector(".img-btn-next").remove();
@@ -77,6 +70,7 @@ function closeImg() {
 }
 
 
+// Popup Window Image Direction Function
 function changeImg(changeDir) {
     document.querySelector("#current-img").remove();
 
