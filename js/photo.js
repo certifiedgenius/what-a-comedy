@@ -10,12 +10,13 @@ fetch('/data/images.json')
 let galleryImages = document.querySelectorAll(".gallery-img");
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
+let imgCaption = document.querySelectorAll(".description");
 
 
 // if statement for the Images
-if(galleryImages) {
-    galleryImages.forEach(function(image, index) {
-        image.onclick = function() {
+if (galleryImages) {
+    galleryImages.forEach(function (image, index) {
+        image.onclick = function () {
             let getElementCss = window.getComputedStyle(image);
             let getFullImgUrl = getElementCss.getPropertyValue("background-image");
             let getImgUrlPos = getFullImgUrl.split("/img/thumbs/");
@@ -35,8 +36,8 @@ if(galleryImages) {
             newImg.setAttribute("id", "current-img");
 
 
-            //Previous and Next Button
-            newImg.onload = function() {
+            //Previous, Next, and Close Button 
+            newImg.onload = function () {
                 let imgWidth = this.width;
                 let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
 
@@ -47,7 +48,7 @@ if(galleryImages) {
                 newNextBtn.setAttribute("class", "img-btn-next");
                 newNextBtn.setAttribute("onclick", "changeImg(1)");
                 newNextBtn.style.cssText = "right: " + calcImgToEdge + "px;";
-                
+
                 let newPrevBtn = document.createElement("a");
                 let btnPrevText = document.createTextNode("Prev");
                 newPrevBtn.appendChild(btnPrevText);
@@ -56,7 +57,7 @@ if(galleryImages) {
                 newPrevBtn.setAttribute("onclick", "changeImg(0)");
                 newPrevBtn.style.cssText = "left: " + calcImgToEdge + "px;";
             }
-        
+
         }
     });
 }
@@ -79,15 +80,14 @@ function changeImg(changeDir) {
     getImgWindow.appendChild(newImg);
 
     let calcNewImg;
-    if(changeDir === 1) {
+    if (changeDir === 1) {
         calcNewImg = getLatestOpenedImg + 1;
-        if(calcNewImg > galleryImages.length) {
+        if (calcNewImg > galleryImages.length) {
             calcNewImg = 1;
         }
-    }
-    else if(changeDir === 0) {
+    } else if (changeDir === 0) {
         calcNewImg = getLatestOpenedImg - 1;
-        if(calcNewImg < 1) {
+        if (calcNewImg < 1) {
             calcNewImg = galleryImages.length;
         }
     }
@@ -97,13 +97,13 @@ function changeImg(changeDir) {
 
     getLatestOpenedImg = calcNewImg;
 
-    newImg.onload = function() {
+    newImg.onload = function () {
         let imgWidth = this.width;
         let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
 
         let nextBtn = document.querySelector(".img-btn-next");
         nextBtn.style.cssText = "right: " + calcImgToEdge + "px;";
-        
+
         let prevBtn = document.querySelector(".img-btn-next");
         prevBtn.style.cssText = "right: " + calcImgToEdge + "px;";
     }
