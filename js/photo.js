@@ -5,11 +5,32 @@ fetch('/data/images.json')
         console.log(data);
     });
 
+fetch("/data/images.json")
+    .then((response) => response.json())
+
+    .then((data) => {
+        console.log(data);
+
+        const imageData = data;
+        console.log(imageData);
+
+        let div = document.createElement("div");
+        document.body.append(div);
+
+        div.innerHTML = imageData.map((image) => {
+            return <img src = $ {image.url};/>
+        });
+    });
+
+
+
 
 // Data Containers
 let galleryImages = document.querySelectorAll(".gallery-img");
 let getLatestOpenedImg;
 let windowWidth = window.innerWidth;
+
+// Description 
 let imgCaption = document.querySelectorAll(".description");
 
 
@@ -34,6 +55,9 @@ if (galleryImages) {
             newImgWindow.appendChild(newImg);
             newImg.setAttribute("src", "img/" + setNewImgUrl);
             newImg.setAttribute("id", "current-img");
+
+
+
 
 
             //Previous, Next, and Close Button 
