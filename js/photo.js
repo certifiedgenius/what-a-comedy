@@ -5,24 +5,6 @@ fetch('/data/images.json')
         console.log(data);
     });
 
-fetch("/data/images.json")
-    .then((response) => response.json())
-
-    .then((data) => {
-        console.log(data);
-
-        const imageData = data;
-        console.log(imageData);
-
-        let div = document.createElement("div");
-        document.body.append(div);
-
-        div.innerHTML = imageData.map((image) => {
-            return <img src = $ {image.url};/>
-        });
-    });
-
-
 
 
 // Data Containers
