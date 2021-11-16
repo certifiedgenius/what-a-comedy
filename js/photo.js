@@ -8,17 +8,17 @@ fetch('/data/images.json')
 
 
 // Data Containers
-let galleryImages = document.querySelectorAll(".gallery-img");
-let getLatestOpenedImg;
-let windowWidth = window.innerWidth;
+let galleryImages = document.querySelectorAll(".gallery-img"); // Creating a container called galleryImages, and select all .gallery-img from the website
+let getLatestOpenedImg; // a container to Keep track of the lastest opened
+let windowWidth = window.innerWidth; // Grab the current the width of the browser and get total width of our browser
 
 // Description 
 let imgCaption = document.querySelectorAll(".description");
 
 
 // if statement for the Images
-if (galleryImages) {
-    galleryImages.forEach(function (image, index) { 
+if (galleryImages) { // if condition to cheack if I have any images in my website (false if I have no Images and True if I have Images)
+    galleryImages.forEach(function (image, index) { // For Each element that I have in here this function is going to do something to all of them
         image.onclick = function () { // Onclick all the code below will be ran
             let getElementCss = window.getComputedStyle(image); // Get all the CSS style with getComputedStyle
             let getFullImgUrl = getElementCss.getPropertyValue("background-image"); // Get the specific background image url
@@ -131,20 +131,23 @@ function changeImg(changeDir) { // changeDir is the varible that is either going
         }
     }
 
-    newImg.setAttribute("src", "img/img-" + calcNewImg + ".jpg");
-    newImg.setAttribute("id", "current-img");
 
-    getLatestOpenedImg = calcNewImg;
+    // Attributes for our newImg that we created
+    newImg.setAttribute("src", "img/img-" + calcNewImg + ".jpg"); // Source, path to the acual image + calculate the new Image + add jpg
+    newImg.setAttribute("id", "current-img"); // Creating a id for our new current IMGAGE, id = "current-img"
+
+    getLatestOpenedImg = calcNewImg; // The index of our image, to keep track of our newest image
 
 
-    newImg.onload = function () {
+    // Button Positions, stay consitence
+    newImg.onload = function () { // New Image has loaded before we 
         let imgWidth = this.width;
         let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
 
-        let nextBtn = document.querySelector(".img-btn-next");
-        nextBtn.style.cssText = "right: " + calcImgToEdge + "px;";
+        let nextBtn = document.querySelector(".img-btn-next"); // Select img-btn-next
+        nextBtn.style.cssText = "right: " + calcImgToEdge + "px;"; // Add css, change it to the new right calculation
 
-        let prevBtn = document.querySelector(".img-btn-next");
-        prevBtn.style.cssText = "right: " + calcImgToEdge + "px;";
+        let prevBtn = document.querySelector(".img-btn-next"); // Select img-btn-next
+        prevBtn.style.cssText = "right: " + calcImgToEdge + "px;"; // Add css, change it to the new right calculation
     }
 }
