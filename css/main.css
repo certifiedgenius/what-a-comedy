@@ -574,13 +574,13 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: 100; /* How thick the layer is  */ 
 }
 
 
 .img-window img {
-    max-height: 80vh;
-    max-width: 80vw;
+    max-height: 80vh; /* So the popup window transparent dosent go allll the waaay to the up and down, soft clipper/ a compressor */
+    max-width: 80vw; /* So the popup window transparent dosent go allll the waaay to the left and right, soft clipper on the sides */
 }
 
 
