@@ -595,7 +595,7 @@ button:hover {
 }
 
 
-/* Next button image styling */
+/* Next button from js,  image styling */
 .img-btn-next {
     display: block;
     padding: 0.375rem 0.625rem;
@@ -615,7 +615,7 @@ button:hover {
 }
 
 
-/* Prev button image styling */
+/* Prev button from js, image styling */
 .img-btn-prev {
     display: block;
     padding: 0.375rem 0.625rem;

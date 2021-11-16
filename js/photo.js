@@ -40,13 +40,13 @@ if (galleryImages) {
             let newImg = document.createElement("img"); // Creating a img element a.k.a a div for the image
             newImgWindow.appendChild(newImg); // Refrensing "newImgWindow" to show where I want to hang my photo, by doing (newImg) I tell it to insert the newImg inside the Canvas
             newImg.setAttribute("src", "img/" + setNewImgUrl); // Linking to the diffrent images using src and "img/" inside this folder is where my images are + set new image url
-            newImg.setAttribute("id", "current-img"); // 
+            newImg.setAttribute("id", "current-img"); // Creating an id, called current-img for the photo inside the canvas, for ous to be able to remove it in function changeImg(changeDir), down below
 
 
             //Previous, Next, and Close Button 
             newImg.onload = function () { // Run this block of code when the image is done loading
-                let imgWidth = this.width; // this object a.k.a newImg, .width to get the width of an object, in this case 
-                let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
+                let imgWidth = this.width; // this object a.k.a newImg, .width to get the width of an object, in this case newImg 
+                let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80; // Get the distance from the image to the edge of the browser
 
 
                 // Next Button
@@ -59,7 +59,7 @@ if (galleryImages) {
                 // Next button attribute (fifa stats sniper)
                 newNextBtn.setAttribute("class", "img-btn-next"); // Creating a class, called "img-btn-next"
                 newNextBtn.setAttribute("onclick", "changeImg(1)"); // Creating a onclick event, that is called "changeImg(1)" so it goes forward
-                newNextBtn.style.cssText = "right: " + calcImgToEdge + "px;";
+                newNextBtn.style.cssText = "right: " + calcImgToEdge + "px;"; // Position of the Right button that is the NEXT button
 
 
                 // Prev Button
@@ -72,7 +72,7 @@ if (galleryImages) {
                 // Prev button attribute (fifa stats wall)
                 newPrevBtn.setAttribute("class", "img-btn-prev"); // Creating a class, called "img-btn-prev"
                 newPrevBtn.setAttribute("onclick", "changeImg(0)"); // Creating a onclick event, that is called "changeImg(0)" so it goes backwards
-                newPrevBtn.style.cssText = "left: " + calcImgToEdge + "px;";
+                newPrevBtn.style.cssText = "left: " + calcImgToEdge + "px;"; // Position of the Right button that is the PREV button
             }
 
         }
@@ -80,34 +80,54 @@ if (galleryImages) {
 }
 
 
+
+
 // Popup Image function that removes Popup Window, Prev, Next and Close 
 function closeImg() {
     document.querySelector(".img-window").remove(); // Removes the POPUP window
+
+
     document.querySelector(".img-btn-next").remove(); // Removes the NEXT button
     document.querySelector(".img-btn-prev").remove(); // Removes the PREV button
-
-    
 }
 
 
-// Popup Window Image Direction Function
-function changeImg(changeDir) {
-    document.querySelector("#current-img").remove();
 
-    let getImgWindow = document.querySelector(".img-window");
-    let newImg = document.createElement("img");
-    getImgWindow.appendChild(newImg);
 
-    let calcNewImg;
-    if (changeDir === 1) {
-        calcNewImg = getLatestOpenedImg + 1;
-        if (calcNewImg > galleryImages.length) {
-            calcNewImg = 1;
+// Function to change the IMAGES left and right
+function changeImg(changeDir) { // changeDir is the varible that is either going to contain a 0 or a 1 which essentially is 0 backwards (prev), and 1 forward (next)
+    document.querySelector("#current-img").remove(); // To remove the current image that we are on before going 0 or 1 (prev or next)
+
+
+    // Creating a new container were our new Image is going to be
+    let getImgWindow = document.querySelector(".img-window"); // Creating a new container for our new Image 
+    let newImg = document.createElement("img"); // Creating the new Image
+    getImgWindow.appendChild(newImg); // Adding the new Image inside our new container we created abow
+
+
+    // Calculating:
+    // What was the current Image we just deleted?
+    // What is the button that we just clicked 0 or 1 (Prev or Next)?
+    let calcNewImg; // Container called calcNewImg
+
+
+    // Forwards [1] Next
+    if (changeDir === 1) { // if statment what is the change direction 0 or 1 (Prev or Next)
+        calcNewImg = getLatestOpenedImg + 1; // When we click Next the photo is going forward [1]
+
+
+        if (calcNewImg > galleryImages.length) { // if stament for, if I click the last image a.k.a 7, there is no image nr 8
+            calcNewImg = 1; // this if stament is going to start from the start, from image nr 1
         }
-    } else if (changeDir === 0) {
-        calcNewImg = getLatestOpenedImg - 1;
-        if (calcNewImg < 1) {
-            calcNewImg = galleryImages.length;
+
+
+        // Backwards [0] Prev
+    } else if (changeDir === 0) { // (what if i clicked Prev button [0] instead of Next [1])
+        calcNewImg = getLatestOpenedImg - 1; // When we click Prev the photo is going backwards [0]
+
+
+        if (calcNewImg < 1) {  // if stament for, if I click the first image a.k.a 1, there is no image nr 0
+            calcNewImg = galleryImages.length; // this if stament is going to start from the end, from image nr 7
         }
     }
 
