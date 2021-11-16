@@ -584,8 +584,9 @@ button:hover {
 }
 
 
+/* Popup window in js when clicked (Model Overlay)*/
 .description {
-    color: purple;
+    color: blue;
     font-size: 2rem;
     position: absolute;
     bottom: 5%;

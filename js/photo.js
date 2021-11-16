@@ -33,13 +33,11 @@ if (galleryImages) {
             newImgWindow.setAttribute("class", "img-window");
             newImgWindow.setAttribute("onclick", "closeImg()");
 
+            // My canvas where my photo is attached to 
             let newImg = document.createElement("img");
             newImgWindow.appendChild(newImg);
             newImg.setAttribute("src", "img/" + setNewImgUrl);
             newImg.setAttribute("id", "current-img");
-
-
-
 
 
             //Previous, Next, and Close Button 
@@ -69,11 +67,13 @@ if (galleryImages) {
 }
 
 
-// Popup Image Closing Function
+// Popup Image Buttons Prev, Next and Close Function
 function closeImg() {
     document.querySelector(".img-window").remove();
     document.querySelector(".img-btn-next").remove();
     document.querySelector(".img-btn-prev").remove();
+
+    
 }
 
 
