@@ -1,10 +1,20 @@
 // fetching data from the images.json file
-fetch('/data/images.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    });
+fetch("./images.json")
+    .then((response) => response.json())
 
+    .then((data) => {
+        console.log(data);
+
+        const imageData = data;
+        console.log(imageData);
+
+        let div = document.createElement("div");
+        document.body.append(div);
+
+        div.innerHTML = imageData.map((image) => {
+            return `<img src=${image.url}/>`
+        });
+    });
 
 
 // Data Containers
@@ -73,6 +83,15 @@ if (galleryImages) { // if condition to cheack if I have any images in my websit
                 newPrevBtn.setAttribute("class", "img-btn-prev"); // Creating a class, called "img-btn-prev"
                 newPrevBtn.setAttribute("onclick", "changeImg(0)"); // Creating a onclick event, that is called "changeImg(0)" so it goes backwards
                 newPrevBtn.style.cssText = "left: " + calcImgToEdge + "px;"; // Position of the Right button that is the PREV button
+
+
+                // Description inside the popup
+                let newDescription = document.createElement("div");
+                newDescription.appendChild(newDescription);
+                newDescription.setAttribute("class", "description");
+                newDescription.setAttribute("id", "current-description");
+
+                
             }
 
         }
@@ -126,7 +145,7 @@ function changeImg(changeDir) { // changeDir is the varible that is either going
         calcNewImg = getLatestOpenedImg - 1; // When we click Prev the photo is going backwards [0]
 
 
-        if (calcNewImg < 1) {  // if stament for, if I click the first image a.k.a 1, there is no image nr 0
+        if (calcNewImg < 1) { // if stament for, if I click the first image a.k.a 1, there is no image nr 0
             calcNewImg = galleryImages.length; // this if stament is going to start from the end, from image nr 7
         }
     }

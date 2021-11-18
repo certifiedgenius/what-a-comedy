@@ -586,12 +586,13 @@ button:hover {
 
 /* Popup window in js when clicked (Model Overlay)*/
 .description {
-    color: blue;
+    color: rgb(255, 187, 0);
     font-size: 2rem;
     position: absolute;
     bottom: 5%;
     left: 50%;
     transform: translate(-50%, -5%);
+    z-index: 250;
 }
 
 
