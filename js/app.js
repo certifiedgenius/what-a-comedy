@@ -27,7 +27,7 @@ document.addEventListener("click", function (event) {
     if (event.target.classList.contains("targetImage")) {
         let source = event.target.getAttribute("src");
         let modalPopup = document.querySelector("model-popup");
-        modalPopup.getElementsByClassName.display = "block";
+        modalPopup.style.display = "block";
         console.log(source);
         document.querySelector("#image-popup").src = source;
         let select = document.getElementById("description");
@@ -35,3 +35,7 @@ document.addEventListener("click", function (event) {
         select.innerText = getData;
     }
 });
+
+btn.onclick = function () {
+    modalPopup.style.display = "none";
+};
