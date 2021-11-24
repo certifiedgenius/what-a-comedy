@@ -446,7 +446,7 @@ button:hover {
 /* -------------------------------------------------------------------------- */
 /*                                 Photo Page                                 */
 /* -------------------------------------------------------------------------- */
-.photo-page-container {
+#photo-page-container {
     width: 100%;
     max-width: 100vh;
     margin: auto;
@@ -456,7 +456,7 @@ button:hover {
     margin-block-end: 2em;
 }
 
-
+/* Activate dis in html or Just use a diffrent design */
 .img-gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -569,7 +569,13 @@ button:hover {
 }
 
 
-
+/* Audio Bottom of the page */
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
 
 /* -------------------------------------------------------------------------- */
 /*                       /Responsive page for Photo Page                      */
