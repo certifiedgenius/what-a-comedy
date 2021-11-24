@@ -26,7 +26,7 @@ fetch("/data/images.json")
 document.addEventListener("click", function (event) {
     if (event.target.classList.contains("targetImage")) {
         let source = event.target.getAttribute("src");
-        let modalPopup = document.querySelector("model-popup");
+        let modalPopup = document.querySelector("#modal-popup");
         modalPopup.style.display = "block";
         console.log(source);
         document.querySelector("#image-popup").src = source;
