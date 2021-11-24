@@ -29,6 +29,9 @@ document.addEventListener("click", function (event) {
         let modalPopup = document.querySelector("model-popup");
         modalPopup.getElementsByClassName.display = "block";
         console.log(source);
-        
+        document.querySelector("#image-popup").src = source;
+        let select = document.getElementById("description");
+        let getData = event.target.dataset.description;
+        select.innerText = getData;
     }
 });
