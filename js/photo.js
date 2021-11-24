@@ -1,20 +1,9 @@
 // fetching data from the images.json file
-fetch("./images.json")
-    .then((response) => response.json())
-
-    .then((data) => {
-        console.log(data);
-
-        const imageData = data;
-        console.log(imageData);
-
-        let div = document.createElement("div");
-        document.body.append(div);
-
-        div.innerHTML = imageData.map((image) => {
-            return `<img src=${image.url}/>`
+fetch("../data/images.json")
+        .then((response) => response.json())
+        .then((data) => {
+            
         });
-    });
 
 
 // Data Containers
