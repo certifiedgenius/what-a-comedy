@@ -1,7 +1,5 @@
 let photoContainer = document.querrySelector("#photo-page-container");
 
-
-
 fetch("/data/images.json")
     .then((response) => response.json())
     .then((photoData) => {
@@ -21,5 +19,16 @@ fetch("/data/images.json")
             photoContainer.appendChild(img);
             photoContainer.appendChild(pTagg);
             photoContainer.appendChild(pTaggAlt);
-        })
-    })
+        });
+    });
+
+
+document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("targetImage")) {
+        let source = event.target.getAttribute("src");
+        let modalPopup = document.querySelector("model-popup");
+        modalPopup.getElementsByClassName.display = "block";
+        console.log(source);
+        
+    }
+});
