@@ -456,6 +456,43 @@ button:hover {
     margin-block-end: 2em;
 }
 
+#modal-popup {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#btn {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin: 1rem;
+}
+
+#popup > img {
+    max-width: 80vw;
+    max-height: 80vh;
+    display: block;
+    margin: auto;
+    margin-top: 6.5rem;
+}
+
+#popup > p {
+    color: rgba(255, 187, 0,);
+    font-size: 2rem;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    z-index: 250;
+}
+
 /* Activate dis in html or Just use a diffrent design */
 .img-gallery {
     display: grid;

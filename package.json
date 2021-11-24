@@ -1,0 +1,22 @@
+{
+  "name": "mjsaysheehee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/certifiedgenius/mjsaysheehee.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/certifiedgenius/mjsaysheehee/issues"
+  },
+  "homepage": "https://github.com/certifiedgenius/mjsaysheehee#readme",
+  "devDependencies": {
+    "eslint": "^8.3.0"
+  }
+}
