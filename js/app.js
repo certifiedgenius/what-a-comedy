@@ -6,19 +6,19 @@ fetch("/data/images.json")
         photoData.forEach((image) => {
             let img = document.createElement("img");
             let pTag = document.createElement("p");
-            let pTagAlt = document.createElement("p");
+            let pTagCaptionOnPage = document.createElement("p");
 
             img.src = image.url;
             img.alt = image.alt;
             img.description = image.description;
             img.dataset.description = image.description;
             pTag.innerHTML = image.title;
-            pTagAlt.innerHTML = image.alt;
+            pTagCaptionOnPage.innerHTML = image.description;
             img.classList = "targetImage";
 
             photoContainer.appendChild(img);
             photoContainer.appendChild(pTag);
-            photoContainer.appendChild(pTagAlt);
+            photoContainer.appendChild(pTagCaptionOnPage);
         });
     });
 
@@ -37,6 +37,7 @@ document.addEventListener("click", function (event) {
 
     }
 });
+
 
 btn.onclick = function () {
     modalPopup.style.display = "none";
