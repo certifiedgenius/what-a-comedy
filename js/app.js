@@ -33,13 +33,13 @@ document.addEventListener("click", function (event) {
         let select = document.getElementById("description");
         let getData = event.target.dataset.description;
         select.innerText = getData;
-    } 
+    }
 });
 
 // Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-    modal.style.display = "none";
-}
+let modalPopup = document.querySelector("#modal-popup");
+
+btn.onclick = function () {
+    modalPopup.style.display = "none";
+};
