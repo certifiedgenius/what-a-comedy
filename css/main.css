@@ -446,16 +446,28 @@ button:hover {
 /* -------------------------------------------------------------------------- */
 /*                                 Photo Page                                 */
 /* -------------------------------------------------------------------------- */
+
 #photo-page-container {
     width: 100%;
     max-width: 100vh;
     margin: auto;
     padding: 0 1.5rem;
-
+    
     margin-block-start: 2em;
     margin-block-end: 2em;
 }
 
+#photo-page-container > img {
+    width: 18.75rem;
+    height: 18.75rem;
+    margin-top: 1rem;
+}
+
+#photo-page-container > p {
+    margin-top: 1rem;
+}
+
+/* The transparent canvas */
 #modal-popup {
     display: none;
     width: 100vw;
