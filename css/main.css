@@ -523,10 +523,6 @@ button:hover {
     cursor: pointer;
 }
 
-/* Close button THE RED ONE LEFT SIDE inside modal */
-#btn {
-    
-}
 
 /* POPUP Image inside modal */
 #image-popup {
@@ -727,7 +723,7 @@ button:hover {
 
 
 .page-line-break {
-    margin-left: 40.2rem;
+    margin-left: 63.2rem;
     max-width: 60ch;
 }
 
@@ -856,7 +852,7 @@ button:hover {
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
 
     margin-block-start: 2rem;
-    margin-block-end: 2rem;
+    margin-block-end: 4.2rem;
 }
 
 
