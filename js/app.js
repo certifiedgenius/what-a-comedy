@@ -33,6 +33,8 @@ document.addEventListener("click", function (event) {
         let select = document.getElementById("description");
         let getData = event.target.dataset.description;
         select.innerText = getData;
+
+
     }
 });
 

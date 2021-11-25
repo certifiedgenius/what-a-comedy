@@ -1,7 +1,7 @@
 [
     {
         "id": "0",
-        "url": "img/img-1.jpg",
+        "url": "../img/img-1.jpg",
         "title": "John Lennon",
         "description": "John Lennon med sin Mellotron MK II",
         "alt": "John Lennon spelar på sin Mellotron MK II"
