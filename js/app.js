@@ -1,4 +1,4 @@
-let photoContainer = document.querrySelector("#photo-page-container");
+let photoContainer = document.querySelector("#photo-page-container");
 
 fetch("/data/images.json")
     .then((response) => response.json())
