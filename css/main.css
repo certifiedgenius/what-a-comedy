@@ -395,13 +395,13 @@ button:hover {
         position: relative;
         top: 98px;
     }
-    
+
     #blog-post-title-3 {
         position: relative;
         top: 60px;
         font: 7.8px;
         margin-bottom: 1px;
-        
+
     }
 
 
@@ -435,7 +435,7 @@ button:hover {
         right: 173px;
 
         font-size: 1rem;
-        
+
         padding: 0.6rem 0.5rem;
         border-radius: 0.2rem;
     }
@@ -469,12 +469,11 @@ button:hover {
 }
 
 #btn {
-    width: 100px;
-    height: 100px;
     position: absolute;
-    margin: 1rem;
+    margin: 0rem;
 }
 
+/* POPUP Image inside modal */
 #popup > img {
     max-width: 80vw;
     max-height: 80vh;
@@ -483,8 +482,9 @@ button:hover {
     margin-top: 6.5rem;
 }
 
+/* Description inside modal */
 #popup > p {
-    color: rgba(255, 187, 0,);
+    color: rgba(255, 187, 0, );
     font-size: 2rem;
     position: absolute;
     bottom: 5%;

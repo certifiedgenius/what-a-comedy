@@ -5,20 +5,20 @@ fetch("/data/images.json")
     .then((photoData) => {
         photoData.forEach((image) => {
             let img = document.createElement("img");
-            let pTagg = document.createElement("p");
-            let pTaggAlt = document.createElement("p");
+            let pTag = document.createElement("p");
+            let pTagAlt = document.createElement("p");
 
             img.src = image.url;
             img.alt = image.alt;
             img.description = image.description;
             img.dataset.description = image.description;
-            pTagg.innerHTML = image.title;
-            pTaggAlt.innerHTML = image.alt;
+            pTag.innerHTML = image.title;
+            pTagAlt.innerHTML = image.alt;
             img.classList = "targetImage";
 
             photoContainer.appendChild(img);
-            photoContainer.appendChild(pTagg);
-            photoContainer.appendChild(pTaggAlt);
+            photoContainer.appendChild(pTag);
+            photoContainer.appendChild(pTagAlt);
         });
     });
 
