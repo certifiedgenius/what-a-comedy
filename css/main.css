@@ -464,14 +464,25 @@ button:hover {
 #photo-page-container > img {
     margin: auto;
     display: block;
-    columns: 2;
     width: 80%;
     max-width: 43.75rem;
 }
 
+
 /* Title on the page of the picture */
 #photo-page-container > p {
-    position: relative;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #000000;
+    padding: 0px 193px 39px;
+    height: 2.5rem;
+    margin-block-start: 1.5rem;
+    margin-block-end: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
 
 }
 

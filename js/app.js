@@ -33,12 +33,6 @@ document.addEventListener("click", function (event) {
         let select = document.getElementById("description");
         let getData = event.target.dataset.description;
         select.innerText = getData;
-    } else () => {
-        let span = document.getElementsByClassName("close")[0];
-
-        span.onclick = function() { 
-            modal.style.display = "none";
-        }
     } 
 });
 
