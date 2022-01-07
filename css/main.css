@@ -817,7 +817,7 @@ button:hover {
 /* Macbook Air 13 inch 2020 */
 @media (max-width: 1444px) {
     .aboutmep {
-        left: 20.7rem;
+        left: 20rem;
     }
 
     .trav {
