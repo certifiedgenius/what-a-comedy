@@ -1,6 +1,6 @@
 <?php
 
-include('../db.config.php');
+include('./db.config.php');
 
 ?>
 
@@ -13,9 +13,11 @@ include('../db.config.php');
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/main.css">
 
-        <title>inside the bank</title>
+        <!-- Custom CSS File's -->
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+
+        <title>what a comedy</title>
 </head>
 
 
@@ -23,29 +25,7 @@ include('../db.config.php');
 
 
         <!-- Header -->
-        <header>
-                <div class="headerContainer">
-                        <div>
-                                <h1 class="header-title">what a comedy</h1>
-                        </div>
-
-
-                        <!--Navigation Bar-->
-                        <div>
-                                <nav>
-                                        <ol class="nav-area">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="photos.html">Photos</a></li>
-                                                <li><a href="aboutme.html">About Me</a></li>
-
-
-                                                <a class="btn-area" href="contact.html"><button>Contact Me</button></a>
-                                        </ol>
-                                </nav>
-                        </div>
-                </div>
-        </header>
+        <?php include 'includes/header.php'; ?>
 
 
 
@@ -73,37 +53,7 @@ include('../db.config.php');
 
 
         <!--footer-->
-        <div class="footer-container">
-                <div class="footer">
-                        <div class="footer-heading footer-1">
-                                <h2>About Us</h2>
-                                <a href="#">Blog</a>
-                                <a href="#">Demo</a>
-                                <a href="#">Customers</a>
-                                <a href="#">Investors</a>
-                                <a href="#">Terms of Service</a>
-                        </div>
-                        <div class="footer-heading footer-2">
-                                <h2>Contact Us</h2>
-                                <a href="#">Jobs</a>
-                                <a href="#">Support</a>
-                                <a href="#">Contact</a>
-                                <a href="#">Sponsorships</a>
-                        </div>
-                        <div class="footer-heading footer-3">
-                                <h2>Social Media</h2>
-                                <a href="#">Instagram</a>
-                                <a href="#">Spotify</a>
-                                <a href="#">Youtube</a>
-                                <a href="#">Twitter</a>
+        <?php include 'includes/footer.php'; ?>
 
-                        </div>
-                        <div class="footer-email-form">
-                                <h2>Join our newsletter</h2>
-                                <input type="email" placeholder="Enter your email address" id="footer-email">
-                                <input type="Submit" value="Sign Up" id="footer-email-btn">
-                        </div>
-                </div>
-        </div>
 </body>
 </html>
