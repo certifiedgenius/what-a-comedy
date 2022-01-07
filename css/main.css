@@ -453,7 +453,7 @@ button:hover {
     max-width: 100vh;
     margin: auto;
     padding: 0 1.5rem;
-    
+
     margin-block-start: 2em;
     margin-block-end: 2em;
 }
@@ -494,8 +494,8 @@ button:hover {
     padding-top: 6.25rem; /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.8); /* Black with opacity */
@@ -539,7 +539,7 @@ button:hover {
 
     color: rgba(255, 187, 0);
     font-size: 2rem;
-    
+
     text-align: center;
     max-width: 56.75rem;
     width: 80%;
@@ -813,6 +813,19 @@ button:hover {
 /* -------------------------------------------------------------------------- */
 /*                             Responsive about me                            */
 /* -------------------------------------------------------------------------- */
+
+/* Macbook Air 13 inch 2020 */
+@media (max-width: 1444px) {
+    .aboutmep {
+        left: 20.7rem;
+    }
+
+    .trav {
+        margin-block-start: 6.2em;
+    }
+}
+
+
 @media (max-width: 375px) {
     .trav {
         height: 250px;
@@ -828,6 +841,7 @@ button:hover {
         top: 8rem;
     }
 }
+
 
 
 
