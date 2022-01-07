@@ -14,29 +14,7 @@
 <body>
 
     <!-- Header -->
-    <header>
-        <div class="headerContainer">
-            <div>
-                <h1 class="header-title">what a comedy</h1>
-            </div>
-
-
-            <!--Navigation Bar-->
-            <div>
-                <nav>
-                    <ol class="nav-area">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="photos.html">Photos</a></li>
-                        <li><a href="aboutme.html">About Me</a></li>
-
-
-                        <a class="btn-area" href="contact.html"><button>Contact Me</button></a>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <?php include 'includes/header.php'; ?>
 
 
 
@@ -53,11 +31,11 @@
 
 
                 <strong>Lite om mig själv</strong>
-                
+
                 <pre class="aboutmep">
-                
-                
-                    Hej jag heter Mugeera. Innan jag började på Medieinstitutet så gick jag på gymnasiet. 
+
+
+                    Hej jag heter Mugeera. Innan jag började på Medieinstitutet så gick jag på gymnasiet.
                     Jag valde att studera på Medieinstitutet för att jag vill bli en Webbutvecklare.
                     Efter min utbildningen på Medieinstitutet vill jag jobba som Webbutvecklare.
 
@@ -67,7 +45,7 @@
             </main>
         </div>
 
-        
+
     </div>
 
 
@@ -122,5 +100,5 @@
     Navigation with search function
     Logo/name top left
     Contact Us btn top right
-    Make a grid 
+    Make a grid
 -->
