@@ -1,3 +1,10 @@
+<?php
+
+include('../db.config.php');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +52,7 @@
 
                         <!--Dog day afternoon trailer-->
                         <div class="yt-video-container">
-                                <iframe 
+                                <iframe
                                         src="https://www.youtube-nocookie.com/embed/4ca0T6jbhHo?autoplay=1"
                                         title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -62,7 +69,7 @@
                                 </a>
                         </div>
 
-        
+
 
 
         <!--footer-->
@@ -100,5 +107,3 @@
         </div>
 </body>
 </html>
-
-
