@@ -18,20 +18,18 @@ include('./db.config.php');
         <!-- Custom CSS File's -->
         <link rel="stylesheet" type="text/css" href="css/main.css">
 
-        
+
         <title>what a comedy</title>
 </head>
 
-
 <body>
-
 
         <!-- Header -->
         <?php include 'includes/header.php'; ?>
 
 
 
-
+        
                         <!--Dog day afternoon trailer-->
                         <div class="yt-video-container">
                                 <iframe
