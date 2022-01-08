@@ -26,10 +26,10 @@
                 <div>
                         <nav>
                                 <ol class="nav-area">
-                                        <li><a href="blog.html">Back</a></li>
+                                        <li><a href="blog.php">Back</a></li>
 
 
-                                        <a class="btn-area" href="contact.html"><button>Contact Me</button></a>
+                                        <a class="btn-area" href="contact.php"><button>Contact Me</button></a>
                                 </ol>
                         </nav>
                 </div>
@@ -255,11 +255,10 @@
 
 
 
-
-
-
         <!--footer-->
         <?php include 'includes/footer.php'; ?>
+
+
 
 
 </body>
