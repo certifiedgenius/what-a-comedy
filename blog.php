@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 
 
 <head>
@@ -43,7 +43,7 @@
                                         The Beginnings Of Hip-Hop!!</p>
 
 
-                                <a href="articles.html" class="blog-post-cta">Read More</a>
+                                <a href="articles.php" class="blog-post-cta">Read More</a>
 
                         </div>
                 </div>
@@ -77,7 +77,7 @@
                                         musikskapande.</p>
 
 
-                                <a href="articles.html" class="blog-post-cta">Read More</a>
+                                <a href="articles.php" class="blog-post-cta">Read More</a>
 
                         </div>
                 </div>
@@ -113,7 +113,7 @@
                                         och vrider och vänder på de små pussel bittarna som man har vändit på.</p>
 
 
-                                <a href="articles.html" class="blog-post-cta">Read More</a>
+                                <a href="articles.php" class="blog-post-cta">Read More</a>
 
                         </div>
                 </div>
@@ -130,4 +130,4 @@
 
 </body>
 
-</html>
+</php>

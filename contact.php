@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <title>Contact</title>
 
@@ -28,7 +29,7 @@
 
             <div class="inside-form">
                 <div class="input-holder">
-                    <input type="text" class="input-text" required>
+                    <input type="email" class="input-text" required>
                     <span class="label">Email Address</span>
                 </div>
 
@@ -40,12 +41,12 @@
 
 
                 <div class="input-holder">
-                    <textarea required></textarea>
-                    <span class="label">Message</span>
+                    <textarea class="input-text-message" cols="45" rows="5" required></textarea>
+                    <span class="label"><br>Message</span>
                 </div>
 
 
-                <button class="send-btn">Send</button>
+                <button onclick="alert('We will respond as soon as we can')" class="send-btn" type="submit" name="submit" value="Submit">Submit</button>
             </div>
         </form>
     </div>
@@ -57,7 +58,7 @@
     <?php include 'includes/footer.php'; ?>
 
 
-    
+
 
 </body>
 </html>
