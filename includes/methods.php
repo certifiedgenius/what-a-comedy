@@ -1,6 +1,6 @@
 <?php
 
-require_once "db.config.php";
+require_once ('./db.config.php');
 
 
 session_start();
@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 
 function redirectTo($url = null) {
     $url = $url ?? '';
-    header("Location: http://localhost/what_a_comedy/$url");
+    header("Location: https://localhost/what_a_comedy/$url");
     exit;
 }
 
@@ -40,7 +40,7 @@ function listAllBlogpost() {
 }
 
 function showAllAttributes() {
-    
+
     $pdo = connectToDB();
 
     $stmt = $pdo->prepare('SELECT title, subject, message FROM blogpost WHERE id = :id');
