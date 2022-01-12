@@ -1,3 +1,13 @@
+<?php
+
+    require_once "./includes/methods.php";
+
+    isUserLoggedIn();
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +54,7 @@
     <?php include 'includes/footer.php'; ?>
 
 
-    
+
 
     <script src="/js/app.js"></script>
 </body>
