@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 
 function redirectTo($url = null) {
     $url = $url ?? '';
-    header("Location: http://localhost/what_a_comedy/php/$url");
+    header("Location: http://localhost/what_a_comedy/$url");
     exit;
 }
 
@@ -25,6 +25,7 @@ function isUserLoggedIn() {
 }
 
 function listAllBlogpost() {
+
     $pdo = connectToDB();
 
     $statement = $pdo->prepare('SELECT id, title, subject, message FROM blogpost');
@@ -39,6 +40,7 @@ function listAllBlogpost() {
 }
 
 function showAllAttributes() {
+    
     $pdo = connectToDB();
 
     $stmt = $pdo->prepare('SELECT title, subject, message FROM blogpost WHERE id = :id');
