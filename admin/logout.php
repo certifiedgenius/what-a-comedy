@@ -1,6 +1,7 @@
 <?php
-require_once "../properties/methods.php";
-require_once "../properties/connection.php";
+
+require_once "../includes/methods.php";
+require_once "./db.config.php";
 
 unset($_SESSION['user']);
 session_unset();
