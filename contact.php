@@ -1,4 +1,13 @@
 <?php
+
+require_once "./db.config.php";
+require_once "./includes/methods.php";
+require_once "./includes/header.php";
+
+isUserLoggedIn();
+
+
+
     if (isset($_POST['submitkontakt'])) { // submit contact
         $firstName = $_POST['firstName'];
         $lastName = $_POST['lastName'];

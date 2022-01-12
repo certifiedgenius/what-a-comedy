@@ -34,30 +34,42 @@ isUserLoggedIn();
 
 
 
-                        <!--Dog day afternoon trailer-->
-                        <div class="yt-video-container">
-                                <iframe
-                                        src="https://www.youtube-nocookie.com/embed/4ca0T6jbhHo?autoplay=1"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
+        <!--Dog day afternoon trailer-->
+        <div class="yt-video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/4ca0T6jbhHo?autoplay=1" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+        </div>
+
+
+
+
+        <!--Rick ROll link-->
+        <div class="rickroll">
+                <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">
+                        <h1>Sal's mental breakdown in Algeria</h1>
+                </a>
+        </div>
+
+
+        <!-- All the latest blogs -->
+        <h1 class="latest-blogpost">Latest Post</h1>
+
+        <div class="container">
+
+        
+                <div class="wrapper">
+
+                        <div class="div-blog">
+                                <?php listAllBlogpost(); ?>
                         </div>
-
-
-
-
-                        <!--Rick ROll link-->
-                        <div class="rickroll">
-                                <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">
-                                        <h1>Sal's mental breakdown in Algeria</h1>
-                                </a>
-                        </div>
-
-
-
+                </div>
+        </div>
 
         <!--footer-->
         <?php include 'includes/footer.php'; ?>
 
 </body>
+
 </html>
