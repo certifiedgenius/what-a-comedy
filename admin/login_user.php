@@ -1,7 +1,7 @@
 <?php
 
 require_once "../includes/methods.php";
-require_once "./db.config.php";
+require_once "../includes/db.config.php";
 
 
 ini_set('display_errors', 1);

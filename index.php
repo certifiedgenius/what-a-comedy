@@ -1,7 +1,7 @@
 <?php
 
 require_once "./includes/methods.php";
-require_once('./db.config.php');
+require_once('./includes/db.config.php');
 require_once "./includes/header.php";
 
 isUserLoggedIn();
@@ -58,7 +58,7 @@ isUserLoggedIn();
 
         <div class="container">
 
-        
+
                 <div class="wrapper">
 
                         <div class="div-blog">
