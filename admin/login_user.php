@@ -1,10 +1,13 @@
-<?php 
-require_once "../properties/methods.php";
-require_once "../properties/connection.php";
+<?php
+
+require_once "../includes/methods.php";
+require_once "./db.config.php";
+
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
 
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
@@ -18,17 +21,17 @@ if(!password_verify($password, $user['password'])) {
   redirectTo('./login.php');
 };
 
-$_SESSION['user'] = $user; 
+$_SESSION['user'] = $user;
 redirectTo('./index.php');
 /* redirectTo ('./admin/) */
 
 /* if ($user['user_type'] === NULL) {
   echo "user ett";
-  header('location:http://localhost/individuella-php/index.php');
+  header('location:http://localhost/what_a_comedy/index.php');
 }
 
 if($user['user_type'] === 1) {
   echo "admin";
-  header("location:http://localhost/individuella-php/admin/index.php");
-} 
+  header("location:http://localhost/what_a_comedy/admin/index.php");
+}
  */
