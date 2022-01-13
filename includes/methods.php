@@ -1,6 +1,12 @@
 <?php
 
-require_once ('./db.config.php');
+require_once ('./includes/db.config.php');
+
+// $path = "/includes/db.config.php";
+
+// echo "Path : $path";
+
+// require "$path";
 
 
 session_start();
