@@ -1,6 +1,6 @@
 <?php
 
-require_once ('./db.config.php');
+require_once ('./includes/db.config.php');
 
 
 session_start();
@@ -10,11 +10,15 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+
+
+
 function redirectTo($url = null) {
     $url = $url ?? '';
     header("Location: https://localhost/what_a_comedy/$url");
     exit;
 }
+
 
 function isUserLoggedIn() {
     ["user_type" => 1];
@@ -23,6 +27,7 @@ function isUserLoggedIn() {
         redirectTo('./login.php');
     }
 }
+
 
 function listAllBlogpost() {
 
