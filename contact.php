@@ -17,8 +17,8 @@ isUserLoggedIn();
 
         $servername = "localhost";
         $database = "what_a_comedy";
-        $username = "muddaco";
-        $password = "mUdacCo5!#ssS";
+        $username = "root";
+        $password = "root";
         $sql = "mysql:host=$servername;dbname=$database;";
 
     try {

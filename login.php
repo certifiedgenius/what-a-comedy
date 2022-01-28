@@ -1,12 +1,3 @@
-<?php
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,6 +48,7 @@ error_reporting(E_ALL);
         <p>Sign Up</p>
       </a>
     </div>
+    
   </div>
 
   <img src="https://i.gifer.com/EaH.gif"
