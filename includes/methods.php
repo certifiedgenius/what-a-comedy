@@ -1,6 +1,6 @@
 <?php
 
-require_once ('./includes/db.config.php');
+require_once ('db.config.php');
 
 // $path = "/includes/db.config.php";
 
@@ -16,7 +16,7 @@ session_start();
 
 function redirectTo($url = null) {
     $url = $url ?? '';
-    header("Location: https://localhost/what_a_comedy/$url");
+    header("Location: http://what-a-comedy.test/$url");
     exit;
 }
 
