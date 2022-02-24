@@ -2,7 +2,7 @@
 
 require_once ("./includes/methods.php");
 require_once ("./includes/db.config.php");
-require_once ("./includes/header.php");
+
 
 isUserLoggedIn();
 
@@ -29,7 +29,7 @@ isUserLoggedIn();
 <body>
 
         <!-- Header -->
-        <?php include 'includes/header.php'; ?>
+        <?php include './includes/header.php'; ?>
 
 
 
