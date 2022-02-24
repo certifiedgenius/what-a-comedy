@@ -40,7 +40,7 @@ if (isset($_REQUEST['loginform'])) {
 
 			if ($row["email"]==$email) {
 				echo "Sorry, that E-mail already exists.";
-				header( "refresh:3;url=http://localhost/what_a_comedy/register.php" );
+				header( "refresh:3;url=http://what-a-comedy.test/register.php" );
 			}
 
 			else if (!isset($errorMsg)) {
@@ -51,7 +51,7 @@ if (isset($_REQUEST['loginform'])) {
 
 				if ($details->execute(array(':email'=>$email, ':password'=>$new_password))) {
 					$registerMsg="Successful! Please Log in.";
-					header( "refresh:3;url=http://localhost/what_a_comedy/register.php" );
+					header( "refresh:3;url=http://what-a-comedy.test/register.php" );
 				}
 			}
 		}

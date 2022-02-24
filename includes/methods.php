@@ -40,7 +40,7 @@ function listAllBlogpost() {
 
     echo '<ul>';
     foreach ($results as $blogpost) {
-        echo '<li class="post"><a class="post" href="/what_a_comedy/post.php?id='. $blogpost->id .'">'.$blogpost->title. '</a></li>';
+        echo '<li class="post"><a class="post" href="/what-a-comedy.test/post.php?id='. $blogpost->id .'">'.$blogpost->title. '</a></li>'; //http://what-a-comedy.test
     }
     echo '</ul>';
 }

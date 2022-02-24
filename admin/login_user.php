@@ -27,11 +27,11 @@ redirectTo('./index.php');
 
 /* if ($user['user_type'] === NULL) {
   echo "user ett";
-  header('location:http://localhost/what_a_comedy/index.php');
+  header('location:http://what-a-comedy.test/index.php');
 }
 
 if($user['user_type'] === 1) {
   echo "admin";
-  header("location:http://localhost/what_a_comedy/admin/index.php");
+  header("location:http://what-a-comedy.test/admin/index.php");
 }
  */
