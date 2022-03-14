@@ -122,6 +122,22 @@
 
 
 
+        <!-- All the latest blogs -->
+        <h1 class="latest-blogpost">Latest Post</h1>
+
+        <div class="container">
+
+
+                <div class="wrapper">
+
+                        <div class="div-blog">
+                                <?php listAllBlogpost(); ?>
+                        </div>
+                </div>
+        </div>
+
+
+
         <!--footer-->
         <?php include 'includes/footer.php'; ?>
 

@@ -16,7 +16,7 @@
                                                 <li><a href="aboutme.php">About Me</a></li>
                                                 <li><a href="../php/admin/logout.php" class="a-class">Logout</a></li>
 
-                                                <?php if($_SESSION['user']['user_type']): ?>
+                                                <?php if(isset($_SESSION['user']['user_type'])): ?>
 
                                                         <a href="../php/admin/blogpost.php" class="a-class">Create</a>
 

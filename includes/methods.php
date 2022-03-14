@@ -34,12 +34,12 @@ function listAllBlogpost() {
 
     $pdo = connectToDB();
 
-    $statement = $pdo->prepare('SELECT id, title, subject, message, isVisible FROM blogpost');
+    $statement = $pdo->prepare('SELECT id, title, subject, message FROM blogpost');
     $statement->execute();
     $results = $statement->fetchAll(PDO::FETCH_CLASS);
 
     foreach ($results as $blogpost) {
-        if($_SESSION['user']['user_type']) {
+        if(isset($_SESSION['user']['user_type'])) {
             echo '<div class="post">
 
                     <a class="post" href="/what-a-comedy.test/post.php?id='. $blogpost->id .'">'.$blogpost->title. '</a>
@@ -55,12 +55,6 @@ function listAllBlogpost() {
                     echo '<div class="post"><a class="post" href="/what-a-comedy.test/post.php?id='. $blogpost->id .'">'.$blogpost->title. '</a></div>';
                 }
     }
-
-    /* echo '<ul>';
-    foreach ($results as $blogpost) {
-        echo '<li class="post"><a class="post" href="/what-a-comedy.test/post.php?id='. $blogpost->id .'">'.$blogpost->title. '</a></li>'; //http://what-a-comedy.test
-    }
-    echo '</ul>'; */
 }
 
 function showAllAttributes() {
