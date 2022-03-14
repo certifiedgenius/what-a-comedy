@@ -43,7 +43,7 @@ isUserLoggedIn();
     else {
         echo "Error";
     }
-    redirectTo("./admin/");
+    redirectTo("./contact.php");
 }
 
 ?>
