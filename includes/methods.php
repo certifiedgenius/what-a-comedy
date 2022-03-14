@@ -34,15 +34,33 @@ function listAllBlogpost() {
 
     $pdo = connectToDB();
 
-    $statement = $pdo->prepare('SELECT id, title, subject, message FROM blogpost');
+    $statement = $pdo->prepare('SELECT id, title, subject, message, isVisible FROM blogpost');
     $statement->execute();
     $results = $statement->fetchAll(PDO::FETCH_CLASS);
 
-    echo '<ul>';
+    foreach ($results as $blogpost) {
+        if($_SESSION['user']['user_type']) {
+            echo '<div class="post">
+
+                    <a class="post" href="/what-a-comedy.test/post.php?id='. $blogpost->id .'">'.$blogpost->title. '</a>
+
+                 </div>';
+                 echo '<button class="btn">
+
+                 <a class="btn" href="/what-a-comedy.test/deletepost.php?id='. $blogpost->id .'">Delete</a>
+
+                 </button>';
+
+        } else {
+                    echo '<div class="post"><a class="post" href="/what-a-comedy.test/post.php?id='. $blogpost->id .'">'.$blogpost->title. '</a></div>';
+                }
+    }
+
+    /* echo '<ul>';
     foreach ($results as $blogpost) {
         echo '<li class="post"><a class="post" href="/what-a-comedy.test/post.php?id='. $blogpost->id .'">'.$blogpost->title. '</a></li>'; //http://what-a-comedy.test
     }
-    echo '</ul>';
+    echo '</ul>'; */
 }
 
 function showAllAttributes() {
@@ -81,7 +99,7 @@ function showAllAttributes() {
 
     <link href="styles.css" type="text/css" rel="stylesheet">
 
-    <title>Methods</title>
+    <title>Methods admin/blogpost</title>
 
 </head>
 
