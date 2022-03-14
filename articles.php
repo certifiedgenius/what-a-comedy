@@ -1,3 +1,10 @@
+<?php
+
+  include_once "./includes/methods.php";
+  include_once "./includes/header.php"; // this is the double header
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -253,7 +260,9 @@
 </div>
 
 
-
+                <ul>
+                        <?php showAllAttributes(); ?>
+                </ul>
 
         <!--footer-->
         <?php include 'includes/footer.php'; ?>

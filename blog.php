@@ -1,7 +1,7 @@
 <?php
 require_once "./includes/methods.php";
 require_once "./includes/db.config.php";
-require_once "./includes/header.php";
+
 require_once "deletepost.php";
 isUserLoggedIn();
 
@@ -27,6 +27,23 @@ isUserLoggedIn();
         <?php include 'includes/header.php'; ?>
 
 
+
+
+        <!-- All the latest blogs -->
+        <h1 class="latest-blogpost">Latest Post</h1>
+
+        <div class="container">
+
+
+                <div class="wrapper">
+
+                        <div class="div-blog">
+                                <?php listAllBlogpost(); ?>
+                        </div>
+                </div>
+        </div>
+
+        
 
 
         <!-- Blog roll 1 -->
@@ -131,19 +148,7 @@ isUserLoggedIn();
 
 
 
-        <!-- All the latest blogs -->
-        <h1 class="latest-blogpost">Latest Post</h1>
 
-        <div class="container">
-
-
-                <div class="wrapper">
-
-                        <div class="div-blog">
-                                <?php listAllBlogpost(); ?>
-                        </div>
-                </div>
-        </div>
 
 
 

@@ -3,7 +3,7 @@
                 <div class="footer">
                         <div class="footer-heading footer-1">
                                 <h2>About Us</h2>
-                                <a href="#">Blog</a>
+                                <a href="../blog.php">Blog</a>
                                 <a href="#">Demo</a>
                                 <a href="#">Customers</a>
                                 <a href="#">Investors</a>
@@ -12,8 +12,8 @@
                         <div class="footer-heading footer-2">
                                 <h2>Contact Us</h2>
                                 <a href="#">Jobs</a>
-                                <a href="#">Support</a>
-                                <a href="#">Contact</a>
+                                <a href="../contact.php">Support</a>
+                                <a href="../contact.php">Contact</a>
                                 <a href="#">Sponsorships</a>
                         </div>
                         <div class="footer-heading footer-3">
