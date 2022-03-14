@@ -42,18 +42,24 @@ if (isset($_POST['submit-blogpost'])) {
 
 <body>
   <?php if($_SESSION['user']['user_type']): ?>
+
   <form id="form-blogpost" action="#" method="POST">
+
     <label for="title">Title
       <input id="inputfield" type="text" name="title" />
     </label>
+
     <label for="subject">Subject
       <input id="inputfield" type="text" name="subject" />
     </label>
+
     <label for="message">Content
       <input id="message" type="text" name="content" />
     </label>
+
     <button id="submit-blogpost" type="submit" name="submit-blogpost">Submit</button>
   </form>
+
   <?php endif; ?>
 </body>
 

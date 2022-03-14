@@ -113,8 +113,3 @@ isUserLoggedIn();
 
 </body>
 </html>
-
-<!-- TODO LIST
-    Change Label TO SPAN
-
--->

@@ -14,17 +14,17 @@
                                                 <li><a href="blog.php">Blog</a></li>
                                                 <li><a href="photos.php">Photos</a></li>
                                                 <li><a href="aboutme.php">About Me</a></li>
-                                                <li><a class="a-class"  href="../php/admin/logout.php">Logout</a></li>
+                                                <li><a href="../php/admin/logout.php" class="a-class">Logout</a></li>
 
                                                 <?php if($_SESSION['user']['user_type']): ?>
 
-                                                        <a class="a-class" href="../php/admin/blogpost.php">Create</a>
+                                                        <a href="../php/admin/blogpost.php" class="a-class">Create</a>
 
-                                                        <?php endif; ?>
+                                                <?php endif; ?>
 
                                                 <a class="btn-area" href="contact.php"><button>Contact Me</button></a>
                                         </ol>
                                 </nav>
                         </div>
                 </div>
-        </header>
+</header>
