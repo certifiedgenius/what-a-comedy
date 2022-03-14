@@ -42,17 +42,17 @@ function listAllBlogpost() {
         if(isset($_SESSION['user']['user_type'])) {
             echo '<div class="post">
 
-                    <a class="post" href="/what-a-comedy.test/post.php?id='. $blogpost->id .'">'.$blogpost->title. '</a>
+                    <a class="post" href="http://what-a-comedy.test/articles.php?id='. $blogpost->id .'">'.$blogpost->title. '</a>
 
                  </div>';
                  echo '<button class="btn">
 
-                 <a class="btn" href="/what-a-comedy.test/deletepost.php?id='. $blogpost->id .'">Delete</a>
+                 <a class="btn" href="http://what-a-comedy.test/deletepost.php?id='. $blogpost->id .'">Delete</a>
 
                  </button>';
 
         } else {
-                    echo '<div class="post"><a class="post" href="/what-a-comedy.test/post.php?id='. $blogpost->id .'">'.$blogpost->title. '</a></div>';
+                    echo '<div class="post"><a class="post" href="http://what-a-comedy.test/articles.php?id='. $blogpost->id .'">'.$blogpost->title. '</a></div>';
                 }
     }
 }

@@ -1,3 +1,12 @@
+<?php
+require_once "./includes/methods.php";
+require_once "./includes/db.config.php";
+require_once "./includes/header.php";
+require_once "deletepost.php";
+isUserLoggedIn();
+
+?>
+
 <!DOCTYPE php>
 <php lang="en">
 

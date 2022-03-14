@@ -18,7 +18,7 @@
 
                                                 <?php if(isset($_SESSION['user']['user_type'])): ?>
 
-                                                        <a href="../php/admin/blogpost.php" class="a-class">Create</a>
+                                                        <a href="../admin/blogpost.php" class="a-class">Create</a>
 
                                                 <?php endif; ?>
 
