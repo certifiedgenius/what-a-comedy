@@ -2,7 +2,7 @@
 
 require_once "./includes/db.config.php";
 require_once "./includes/methods.php";
-require_once "./includes/header.php";
+
 
 isUserLoggedIn();
 
@@ -74,30 +74,47 @@ isUserLoggedIn();
 
     <!-- Contact Form -->
     <div class="contact-page-container">
-        <form>
+        <form id="form-kontakt" action="./contact.php" method="POST">
+
             <h1 class="h1">Contact Me</h1>
 
 
+
             <div class="inside-form">
+
                 <div class="input-holder">
-                    <input type="email" class="input-text" required>
-                    <span class="label">Email Address</span>
+                    <input id="inputfield" type="text" name="firstName" class="input-text" required>
+                    <span for="firstname" class="label">Firstname</span>
                 </div>
 
 
                 <div class="input-holder">
-                    <input type="text" class="input-text" required>
-                    <span class="label">Full Name</span>
+                    <input id="inputfield" type="text" name="lastName" class="input-text" required>
+                    <span for="lastname" class="label">Lastname</span>
                 </div>
 
 
                 <div class="input-holder">
-                    <textarea class="input-text-message" cols="41.9" rows="5" required></textarea>
-                    <span class="label"><br>Message</span>
+                    <input id="inputfield" type="email" name="email" class="input-text" required>
+                    <span for="email" class="label">Email Address</span>
                 </div>
 
 
-                <button onclick="alert('We will respond as soon as we can')" class="send-btn" type="submit" name="submit" value="Submit">Submit</button>
+                <div class="input-holder">
+                    <input class="input-text" id="inputfield" type="text" name="subject">
+                    <span class="label" for="subject">Subject</span>
+                </div>
+
+
+
+
+                <div class="input-holder">
+                    <textarea class="input-text-message" type="text" name="message" cols="41.9" rows="5" required></textarea>
+                    <span class="label" for="message" id="message" ><br>Message</span>
+                </div>
+
+
+                <button onclick="alert('We will respond as soon as we can')" id="submit-kontakt" class="send-btn" type="submit" name="submitkontakt" value="Submit">Submit</button>
             </div>
         </form>
     </div>
