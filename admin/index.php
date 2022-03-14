@@ -5,14 +5,10 @@ require_once "../admin/headeradmin.php";
 
 isUserLoggedIn();
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 ?>
 
 
-<?php if($_SESSION['user']['user_type']): ?>
+<?php if(isset($_SESSION['user']['user_type'])): ?>
 
 
 <!DOCTYPE html>

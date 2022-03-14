@@ -2,7 +2,7 @@
 
 require_once "../includes/db.config.php";
 require_once "../includes/methods.php";
-require_once "headeradmin.php";
+
 
 isUserLoggedIn();
 
@@ -27,6 +27,7 @@ if (isset($_POST['submit-blogpost'])) {
   }
   $pdo = connectToDB();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -36,12 +37,27 @@ if (isset($_POST['submit-blogpost'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blogpost</title>
+
+  <!-- Custom CSS File's -->
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+  <title>Admin Blog post</title>
 
 </head>
 
+
+
+
 <body>
-  <?php if($_SESSION['user']['user_type']): ?>
+
+    <!-- Admin Header -->
+    <?php require_once "headeradmin.php"; ?>
+
+
+
+
+  <?php if(isset($_SESSION['user']['user_type'])): ?>
+
 
   <form id="form-blogpost" action="#" method="POST">
 
@@ -60,8 +76,13 @@ if (isset($_POST['submit-blogpost'])) {
     <button id="submit-blogpost" type="submit" name="submit-blogpost">Submit</button>
   </form>
 
+  
   <?php endif; ?>
 </body>
+
+
+
+
 
 <style>
   /* HEADER */

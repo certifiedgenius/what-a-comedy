@@ -43,11 +43,11 @@
     </form>
 
 
-    
+
     <div>
         <span>Don't have an account?</span>
 
-      <button href="register.php" type="submit" class="button">Sign Up</button>
+      <a href="register.php" class="button">Sign up</a>
     </div>
 
   </div>

@@ -1,46 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Header</title>
-</head>
-
-<body>
-
   <header>
+    <div class="headerContainer">
+      <div>
+        <h1 class="header-title">Admin | what a comedy</h1>
+      </div>
 
-    <nav>
-      <ul>
+      <div>
 
-        <li>
-          <a href="../index.php">Home</a>
-        </li>
+        <nav>
+          <ol class="nav-area">
+              <li><a href="../index.php">Home</a></li>
+              <li><a href="../contact.php">Contact</a></li>
+              <li><a href="../photos.php">Photos</a></li>
 
-        <li>
-          <a href="../contact.php">Contact</a>
-        </li>
+              <a href="../admin/logout.php" class="a-class">Log Out</a>
 
-        <li>
-          <a href="../photos.php">Photos</a>
-        </li>
 
-        <a href="../admin/logout.php">Log Out</a>
+              <?php if(isset($_SESSION['user']['user_type'])): ?>
 
-        <?php if($_SESSION['user']['user_type']): ?>
+                <a href="../admin/blogpost.php" class="a-class">Create</a>
 
-        <a href="../admin/blogpost.php">Create</a>
+              <?php endif; ?>
 
-        <?php endif; ?>
 
-      </ul>
-    </nav>
 
+          </ol>
+        </nav>
+      </div>
+    </div>
   </header>
-
-</body>
-
-</html>
