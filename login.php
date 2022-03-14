@@ -7,12 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Custom CSS File's -->
-  <link rel="stylesheet" type="text/css" href="css/login-signup.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 
 
   <title>Log In</title>
 
 </head>
+
 
 <body>
 
@@ -24,36 +25,33 @@
     <form class="form-login" action="./admin/login_user.php" method="POST">
 
       <div>
-        <label><span>E-mail</span>
+        <label>
 
-          <input class="input-login" id="email" type="email" name="email" required/>
+          <input class="input-login" id="email" type="email" name="email" placeholder="E-mail" required/>
         </label>
-
       </div>
 
 
       <div>
-        <label><span>Password</span>
+        <label>
 
-          <input class="input-login" type="password" name="password" required/>
+          <input class="input-login" type="password" name="password" placeholder="Password" required/>
         </label>
       </div>
 
-      <button type="submit" name="loginform">Log In</button>
+      <button type="submit" name="loginform" class="button">Log In</button>
     </form>
 
 
-    <div>
-      Don't have an account?<a href="register.php">
-        <p>Sign Up</p>
-      </a>
-    </div>
     
+    <div>
+        <span>Don't have an account?</span>
+
+      <button href="register.php" type="submit" class="button">Sign Up</button>
+    </div>
+
   </div>
 
-  <img src="https://i.gifer.com/EaH.gif"
-    width="1800" height="800" class="giphy-embed" allowFullScreen></img>
 
 </body>
-
 </html>
