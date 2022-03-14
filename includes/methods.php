@@ -1,15 +1,8 @@
 <?php
 
+session_start();
 require_once ('db.config.php');
 
-// $path = "/includes/db.config.php";
-
-// echo "Path : $path";
-
-// require "$path";
-
-
-session_start();
 
 
 
@@ -66,17 +59,44 @@ function showAllAttributes() {
     $stmt->execute();
     $get = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    echo '<li class="title-post">';
-    print_r($get['title']);
-    echo '</li>';
 
-    echo '<li class="subject-post">';
+    /* Blog post title */
+    echo '<div class="container">';
+
+
+        echo '<section>';
+
+
+            echo '<article>';
+
+                echo '<div class="author-info">';
+
+                    echo '<span class="title-post">';
+
+                        echo '<h1>'; print_r($get['title']); '</h1>';
+
+                    echo '</span>';
+
+
+    /* Post Author */
+    echo '<span>';
+    echo '<address>';
     print_r($get['subject']);
-    echo '</li>';
+    echo '</address>';
+    echo '</span>';
 
-    echo '<li class="message-post">';
+                echo '</div>';
+
+
+    /* Blog post text, the essay */
+    echo '<p class="pijonärer-idag">';
     print_r($get['message']);
-    echo '</li>';
+    echo '</p>';
+
+
+    echo '</article>';
+    echo '</section>';
+    echo '</div>';
 }
 
 ?>

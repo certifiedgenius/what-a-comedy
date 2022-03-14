@@ -15,7 +15,8 @@ isUserLoggedIn();
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/main.css">
+
+        <link rel="stylesheet" type="text/css" href="css/main.css">
 
         <title>Blog</title>
 
@@ -32,18 +33,24 @@ isUserLoggedIn();
         <!-- All the latest blogs -->
         <h1 class="latest-blogpost">Latest Post</h1>
 
-        <div class="container">
+
+        <div class="blog-post-body">
+
+                <div class="blog-post">
 
 
-                <div class="wrapper">
 
-                        <div class="div-blog">
-                                <?php listAllBlogpost(); ?>
+                        <div class="blog-post-info">
+
+                                <h1 class="blog-post-title">
+                                        <?php listAllBlogpost(); ?>
+                                </h1>
+                                <a href="articles.php" class="blog-post-cta">Read More</a>
                         </div>
                 </div>
         </div>
 
-        
+
 
 
         <!-- Blog roll 1 -->

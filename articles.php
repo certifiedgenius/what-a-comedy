@@ -1,7 +1,7 @@
 <?php
 
   include_once "./includes/methods.php";
-  include_once "./includes/header.php"; // this is the double header
+// this is the double header
 
 ?>
 
@@ -42,6 +42,12 @@
                 </div>
         </div>
 </header>
+
+
+
+                <ul>
+                        <?php showAllAttributes(); ?>
+                </ul>
 
 
 
@@ -260,9 +266,7 @@
 </div>
 
 
-                <ul>
-                        <?php showAllAttributes(); ?>
-                </ul>
+
 
         <!--footer-->
         <?php include 'includes/footer.php'; ?>
