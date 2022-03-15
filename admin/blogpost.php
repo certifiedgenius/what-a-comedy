@@ -51,8 +51,8 @@ if (isset($_POST['submit-blogpost'])) {
 
 <section>
 
-  <?php if(isset($_SESSION['user']['user_type'])): ?>
 
+  <?php if(isset($_SESSION['user']['user_type'])): ?>
 
     <form id="form-blogpost" action="#" method="POST">
 
@@ -70,6 +70,7 @@ if (isset($_POST['submit-blogpost'])) {
 
       <button id="submit-blogpost" type="submit" name="submit-blogpost">Submit</button>
     </form>
+
 
 
     <?php endif; ?>
