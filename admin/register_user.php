@@ -19,18 +19,20 @@ if (isset($_REQUEST['loginform'])) {
 
 	if (empty($email)) {
 		echo "Please enter email";
-	}
 
-	else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
+	}	else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 		echo "Please enter a valid E-mail address.";
-	}
 
-	else if (empty($password)) {
+
+	}	else if (empty($password)) {
 		echo "Please enter your password.";
-	}
 
-	else if (strlen($password) < 6) {
+
+	}	else if (strlen($password) < 6) {
 		echo "Password must at be least 6 characters in length.";
+
+
 	} else {
 		try {
 			$select_register=$pdo->prepare("SELECT email FROM users WHERE email=:email");
@@ -41,21 +43,23 @@ if (isset($_REQUEST['loginform'])) {
 			if ($row["email"]==$email) {
 				echo "Sorry, that E-mail already exists.";
 				header( "refresh:3;url=http://what-a-comedy.test/register.php" );
-			}
 
-			else if (!isset($errorMsg)) {
+
+			}	else if (!isset($errorMsg)) {
 				$new_password = password_hash($password, PASSWORD_DEFAULT);
 
 				$details=$pdo->prepare("INSERT INTO users (email, password) VALUES (:email,:password)");
 
-
-				if ($details->execute(array(':email'=>$email, ':password'=>$new_password))) {
-					$registerMsg="Successful! Please Log in.";
-					header( "refresh:3;url=http://what-a-comedy.test/register.php" );
-				}
 			}
-		}
-		catch(PDOException $e) {
+
+
+			if ($details->execute(array(':email'=>$email, ':password'=>$new_password))) {
+				$registerMsg="Successful! Please Log in.";
+				header( "refresh:3;url=http://what-a-comedy.test/register.php" );
+			}
+
+
+		}	catch(PDOException $e) {
 			echo $e->getMessage();
 		}
 	}
