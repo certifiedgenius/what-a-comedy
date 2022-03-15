@@ -23,15 +23,18 @@ if(!password_verify($password, $user['password'])) {
 
 $_SESSION['user'] = $user;
 redirectTo('./index.php');
-/* redirectTo ('./admin/) */
+/* redirectTo ('./admin) */
 
-/* if ($user['user_type'] === NULL) {
+
+
+
+
+if ($user['user_type'] === NULL) {
   echo "user ett";
   header('location:http://what-a-comedy.test/index.php');
-}
+};
 
 if($user['user_type'] === 1) {
   echo "admin";
   header("location:http://what-a-comedy.test/admin/index.php");
-}
- */
+};

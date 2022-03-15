@@ -19,13 +19,13 @@ isUserLoggedIn();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- Custom CSS File's -->
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
 
 
   <title>Admin Page</title>
-
 </head>
+
 
 <body>
 
@@ -40,16 +40,14 @@ isUserLoggedIn();
         <?php listAllBlogpost(); ?>
       </div>
 
+      
       <form>
         <input type="hidden" value=" <?php echo $_SESSION['user']['id']; ?> " name="user_id"/>
       </form>
 
     </div>
-
   </div>
 
   <?php endif; ?>
-
 </body>
-
 </html>

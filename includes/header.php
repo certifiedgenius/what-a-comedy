@@ -22,7 +22,7 @@
                                                         <li><a href="photos.php">Photos</a></li>
                                                         <li><a href="aboutme.php">About Me</a></li>
 
-                                                        <li><a href="../php/admin/logout.php" class="a-class">Logout</a></li>
+                                                        <li><a href="../admin/logout.php" class="a-class">Logout</a></li>
 
                                                 <a class="btn-area" href="contact.php"><button>Contact Me</button></a>
                                         </ol>

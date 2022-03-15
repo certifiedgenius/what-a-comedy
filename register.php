@@ -36,7 +36,7 @@
             </a>
         </div>
     </div>
-    <img src="https://i.gifer.com/EaH.gif" width="1800" height="800" class="giphy-embed" allowFullScreen></img>
+    
 </body>
 
 </html>
