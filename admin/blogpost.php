@@ -27,7 +27,13 @@ if (isset($_POST['submit-blogpost'])) {
   $pdo = connectToDB();
 }
 
+
+
 ?>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
