@@ -33,20 +33,21 @@ function listAllBlogpost() {
 
     foreach ($results as $blogpost) {
         if(isset($_SESSION['user']['user_type'])) {
+
+
             echo '<div class="post">
+                <a class="post" href="http://what-a-comedy.test/articles.php?id='. $blogpost->id .'">'.$blogpost->title. '</a>
+                </div>';
 
-                    <a class="post" href="http://what-a-comedy.test/articles.php?id='. $blogpost->id .'">'.$blogpost->title. '</a>
 
-                 </div>';
-                 echo '<button class="btn">
+                echo '<button class="btn">
+                <a class="btn blog-post-cta" href="http://what-a-comedy.test/deletepost.php?id='. $blogpost->id .'">Delete</a>
+                </button>';
 
-                 <a class="btn blog-post-cta" href="http://what-a-comedy.test/deletepost.php?id='. $blogpost->id .'">Delete</a>
 
-                 </button>';
-
-        } else {
-                    echo '<div class="post"><a class="post" href="http://what-a-comedy.test/articles.php?id='. $blogpost->id .'">'.$blogpost->title. '</a></div>';
-                }
+        } else  {
+            echo '<div class="post"><a class="post" href="http://what-a-comedy.test/articles.php?id='. $blogpost->id .'">'.$blogpost->title. '</a></div>';
+        }
     }
 }
 
