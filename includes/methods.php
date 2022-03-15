@@ -40,7 +40,7 @@ function listAllBlogpost() {
                  </div>';
                  echo '<button class="btn">
 
-                 <a class="btn" href="http://what-a-comedy.test/deletepost.php?id='. $blogpost->id .'">Delete</a>
+                 <a class="btn blog-post-cta" href="http://what-a-comedy.test/deletepost.php?id='. $blogpost->id .'">Delete</a>
 
                  </button>';
 

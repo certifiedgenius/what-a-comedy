@@ -20,7 +20,7 @@ if (isset($_POST['submit-blogpost'])) {
 
   try {
     $stmt->execute();
-    redirectTo('./admin/');
+    redirectTo('./admin');
   } catch(PDOException $e) {
     echo $e->getMessage();
   }
